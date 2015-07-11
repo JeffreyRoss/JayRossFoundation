@@ -1,0 +1,49 @@
+# PostGresQL 9.4.4
+#   gem install pg
+#
+#   Ensure the post gres gem is defined in your Gemfile
+#   gem 'pg'
+#
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  database: jayrossfoundation_dev
+  host: localhost
+  pool: 5
+  timeout: 5000
+  username: 
+  password: 
+
+development:
+  <<: *default
+  adapter: postgresql
+  encoding: utf8
+  database: jayrossfoundation_dev
+  host: localhost
+  pool: 5
+  timeout: 5000
+  username: postgres
+  password: 
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  adapter: postgresql
+  encoding: utf8
+  database: jayrossfoundation_test
+  pool: 5
+  timeout: 5000
+  username: 
+  password: 
+
+production:
+  <<: *default
+  adapter: postgresql
+  encoding: utf8
+  database: jayrossfoundation_prod
+  pool: 5
+  timeout: 5000
+  username: 
+  password: 
