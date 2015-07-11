@@ -1,11 +1,16 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the codebase for The Jay Ross Foundation Project. Below are some dependencies and other technical details useful to deploying this Rails application. 
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version - Ruby 2.2.2p95
+
+* Rails version - Rails 4.2.0
+
+* Bootstrap version - Bootstrap 3.3.5
+
+* Database Engine - PostGres 9.4.4
 
 * System dependencies
 
