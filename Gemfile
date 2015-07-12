@@ -5,6 +5,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.0'
 # Use postgres database
 gem 'pg'
+#bootstrap
+gem 'therubyracer'  
+gem 'jquery-rails' 
+gem 'less-rails-bootstrap'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
