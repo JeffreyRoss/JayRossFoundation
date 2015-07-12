@@ -21,6 +21,20 @@ body {
 }
 
 
+
+.topNav> .container .navbar-brand, .topNav > .container-fluid .navbar-brand {
+  margin-left: 5px !important;
+}
+
+
+.subNav > .container-fluid .navbar-brand{
+  width: 95px !important;
+  font-size: 40px;
+  font-weight: bold;
+  color: #0D2C4C; 
+  background-image: url("jaylogo.jpg"); 
+}
+
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
