@@ -27,12 +27,12 @@ body {
 }
 
 
-.subNav > .container-fluid .navbar-brand{
+.subNav > .container-fluid .navbar-brand {
   width: 95px !important;
   font-size: 40px;
   font-weight: bold;
   color: #0D2C4C; 
-  background-image: url("jaylogo.jpg"); 
+  background-image: url('jaylogo.jpg');
 }
 
 /* CUSTOMIZE THE NAVBAR
@@ -364,7 +364,7 @@ body {
 }
  
 /* Landscape phone to portrait tablet */
-@media (max-width: 767px) and ((min-width: 481px) ) { 
+@media (max-width: 767px) and (min-width: 481px)  { 
 
   .container {
     width: 768px !important;
