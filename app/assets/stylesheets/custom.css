@@ -8,84 +8,27 @@ body {
   background-color: #222 !important;
 }
 
-  .missionStatement {
-    background-color: white !important;
-    height: 350px;
-    text-align: center;   
-    margin-top: -36px;
 
-  }
+.headerBar{
+  height: 69px;
+  color: #222;
+  background-color: #222;
+}
 
-  .takeAction {
-    color: white;
-    height: 750px;
-    background-color: #444;
-    text-align: center;
-    position: relative;
-    margin-top: -36px;
-    z-index: 1 !important;
-    margin-left: -30px !important;
-    padding-left: 90px;   
-  }
+.headerBar a{
+  color: #9D9D9D;
+}
 
-  .takeAction .col-md-12 {
-    overflow: hidden;
-    margin-left: -50px !important;
-  }
+.headerBar a:hover{
+  color: #888;
+}
 
+.headerBar> .container .navbar-brand, .headerBar > .container-fluid .navbar-brand {
+  margin-left: 5px !important;
+}
 
-  .whitetab {
-    background-image: url('tabWhite.png');
-    background-repeat: no-repeat;
-    text-align: center;
-    z-index: 100 !important;
-    margin-left: -55px;
-    height: 36px;
-  }
-
-  .missionGreytab {
-    background-image: url('tabGray.png');
-    background-repeat: no-repeat;
-    text-align: center;
-    z-index: 100 !important;
-    position: relative;
-    height: 36px;
-    margin-top: -60px;
-    margin-left: 7px;
-  }
-
-
-  .donationGreytab {
-    background-image: url('tabGray.png');
-    background-repeat: no-repeat;
-    text-align: center;
-    position: relative;
-    z-index: 100 !important;
-    height: 36px;
-    margin-left: 6px;
-    margin-top: 0;
-  }
-
-  .footerSection {
-    color: #9D9D9D;
-    background-color: #222;
-    position: relative;
-    z-index: 1 !important; 
-  }
-
-  .footerCopyRight {
-    color: #FDCC00;
-    background-color: #222;
-    text-align: center;
-    position: relative;
-    margin-top: 90px;
-    z-index: 1 !important; 
-  }
-
-.donateNowBtn{
-  background-color: #FDCC00 !important;
-  border-color: #FDCC00 !important;
-  color: #444 !important;
+.loginForm{
+  padding-top:5px !important;
 }
 
 .loginForm .btn-success{
@@ -95,25 +38,57 @@ body {
 
 
 
-.topNav> .container .navbar-brand, .topNav > .container-fluid .navbar-brand {
-  margin-left: 5px !important;
-}
 
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
 
-.subNav > .container-fluid .navbar-brand {
+.topNav > .container-fluid .navbar-brand {
   width: 95px !important;
   font-size: 40px;
   font-weight: bold;
   color: #0D2C4C; 
   background-image: url('jaylogo.jpg');
+  background-repeat: no-repeat;
+  background-color: #C4C5C7 !important;
+  height: 90px;
 }
 
-/* CUSTOMIZE THE NAVBAR
--------------------------------------------------- */
+.topNav{
+  margin-top: 50px;
+  height:63px;
+  background-color: #FDCC00 !important;
+  border-color: #fdcc00 !important;
+}
+
+.topNavLinks{
+  padding-top:18px;
+  font-size: 18px;
+}
 
 .subNav{
-  margin-top: 50px;
-  background-color: #FDCC00 !important;
+  background-color: #0C2B4B !important;
+  margin-top: 111px;
+  border-color:  #0C2B4B !important;
+  padding-left: 65px;
+  height: 45px;
+}
+
+.subNav a{
+  color: #eaebed !important;
+}
+
+.subNav a:hover{
+  color: #fff !important;
+}
+    
+.subNav .active a{
+  background-color: #2d649b !important;
+}
+
+.subNav .active a span{
+    display:inline-block;
+    border-bottom:1px solid white;
+    padding-bottom:2px;
 }
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
@@ -199,9 +174,170 @@ body {
   letter-spacing: -1px;
 }
 
+/* Home Controller 
+------------------------- */
+.missionStatement {
+  background-color: white !important;
+  height: 350px;
+  text-align: center;   
+  margin-top: -36px;
+
+}
+
+.takeAction {
+  color: white;
+  height: 750px;
+  background-color: #444;
+  text-align: center;
+  position: relative;
+  margin-top: -36px;
+  z-index: 1 !important;
+  margin-left: -30px !important;
+  padding-left: 90px;   
+}
+
+.takeAction .col-md-12 {
+  overflow: hidden;
+  margin-left: -50px !important;
+}
+
+
+.whitetab {
+  background-image: url('tabWhite.png');
+  background-repeat: no-repeat;
+  text-align: center;
+  z-index: 100 !important;
+  margin-left: -55px;
+  height: 36px;
+}
+
+.missionGreytab {
+  background-image: url('tabGray.png');
+  background-repeat: no-repeat;
+  text-align: center;
+  z-index: 100 !important;
+  position: relative;
+  height: 36px;
+  margin-top: -62px;
+  margin-left: 7px;
+}
+
+
+.donationGreytab {
+  background-image: url('tabGray.png');
+  background-repeat: no-repeat;
+  text-align: center;
+  position: relative;
+  z-index: 100 !important;
+  height: 36px;
+  margin-left: 6px;
+  margin-top: 0;
+}
+
+.footerSection {
+  color: #9D9D9D;
+  background-color: #222;
+  position: relative;
+  z-index: 1 !important; 
+}
+
+.footerCopyRight {
+  color: #FDCC00;
+  background-color: #222;
+  text-align: center;
+  position: relative;
+  margin-top: 90px;
+  z-index: 1 !important; 
+}
+
+.donateNowBtn{
+  background-color: #FDCC00 !important;
+  border-color: #FDCC00 !important;
+  color: #444 !important;
+  float:right;
+  margin-top: 8px !important;
+}
+
+
+/* END HOME CONTROLLER
+-------------------------------------------------- */
+
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
+
+@media (min-width: 770px){
+
+  .aboutusTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 100 !important;
+    height: 36px;
+    top: 0;
+    left: 27px;
+    position: relative;
+  }
+
+  .aboutusSection{
+    background-color: white !important;
+    margin-top:155px;
+    text-align: center;
+  }
+
+  .teamTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 0 !important;
+    position: relative;
+    height: 36px;
+    top: 0;
+    left: 110px;
+  } 
+
+  .aboutjayTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 0 !important;
+    position: relative;
+    height: 36px;
+    top: 0;
+    left: 200px;
+  }  
+
+}
+
+@media (max-width: 769px){
+  .aboutusTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 0 !important;
+    position: relative;
+    height: 36px;
+    top: 0;
+    left: -60px;
+  }
+
+  .teamTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 0 !important;
+    position: relative;
+    height: 36px;
+    top: 0;
+    left: 110px;
+  } 
+
+  .aboutusSection{
+    background-color: white !important;
+    margin-top:150px;
+    text-align: center;
+  }  
+}
 
 /* Large desktop */
 @media (min-width: 885px) { 
