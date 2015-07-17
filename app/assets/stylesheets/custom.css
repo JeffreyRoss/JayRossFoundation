@@ -5,14 +5,30 @@
 body {
   padding-bottom: 40px;
   color: #5a5a5a;
+  background-color: #222 !important;
 }
 
 
+.headerBar{
+  height: 69px;
+  color: #222;
+  background-color: #222;
+}
 
-.donateNowBtn{
-  background-color: #FDCC00 !important;
-  border-color: #FDCC00 !important;
-  color: #444 !important;
+.headerBar a{
+  color: #9D9D9D;
+}
+
+.headerBar a:hover{
+  color: #888;
+}
+
+.headerBar> .container .navbar-brand, .headerBar > .container-fluid .navbar-brand {
+  margin-left: 5px !important;
+}
+
+.loginForm{
+  padding-top:5px !important;
 }
 
 .loginForm .btn-success{
@@ -22,25 +38,58 @@ body {
 
 
 
-.topNav> .container .navbar-brand, .topNav > .container-fluid .navbar-brand {
-  margin-left: 5px !important;
-}
 
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
 
-.subNav > .container-fluid .navbar-brand {
+.topNav > .container-fluid .navbar-brand {
   width: 95px !important;
   font-size: 40px;
   font-weight: bold;
   color: #0D2C4C; 
   background-image: url('jaylogo.jpg');
+  background-repeat: no-repeat;
+  background-color: #C4C5C7 !important;
+  height: 69px;
 }
 
-/* CUSTOMIZE THE NAVBAR
--------------------------------------------------- */
-
-.subNav{
+.topNav{
   margin-top: 50px;
   background-color: #FDCC00 !important;
+  border: none !important;
+}
+
+.topNav .active a{
+  background-color: #dbaf02 !important;
+  height: 69px;
+}
+
+.topNav .active a span{
+    display:inline-block;
+    border-bottom:1px solid white;
+    padding-bottom:2px;
+}
+
+.topNavLinks{
+  font-size: 18px;
+}
+
+.subNav a{
+  color: #eaebed !important;
+}
+
+.subNav a:hover{
+  color: #fff !important;
+}
+    
+.subNav .active a{
+  background-color: #2d649b !important;
+}
+
+.subNav .active a span{
+    display:inline-block;
+    border-bottom:1px solid white;
+    padding-bottom:2px;
 }
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
@@ -126,60 +175,345 @@ body {
   letter-spacing: -1px;
 }
 
+/* Information Sections 
+------------------------- */
+.missionStatement {
+  background-color: white !important;
+  height: 350px;
+  text-align: center;   
+  margin-top: -36px;
+
+}
+
+
+.takeAction {
+  color: white;
+  height: 750px;
+  background-color: #444;
+  text-align: center;
+  position: relative;
+  margin-top: -36px;
+  z-index: 1 !important;
+  margin-left: -30px !important;
+  padding-left: 90px;   
+}
+
+.takeActionSection {
+  color: white;
+  height: 750px;
+  background-color: #444;
+  text-align: center;
+  position: relative;
+  margin-top: 119px;
+  z-index: 1 !important;
+  margin-left: -30px !important;
+  padding-left: 90px;   
+}
+
+.takeAction .col-md-12 {
+  overflow: hidden;
+  margin-left: -50px !important;
+}
+
+
+.whitetab {
+  background-image: url('tabWhite.png');
+  background-repeat: no-repeat;
+  text-align: center;
+  z-index: 100 !important;
+  margin-left: -55px;
+  height: 36px;
+}
+
+.takeactiontab {
+  background-image: url('tabWhite.png');
+  background-repeat: no-repeat;
+  text-align: center;
+  z-index: 100 !important;
+  margin-left: 305px;
+  height: 36px;
+}
+
+.missionGreytab {
+  background-image: url('tabGray.png');
+  background-repeat: no-repeat;
+  text-align: center;
+  z-index: 100 !important;
+  position: relative;
+  height: 36px;
+  margin-top: -62px;
+  margin-left: 7px;
+}
+
+
+.donationGreytab {
+  background-image: url('tabGray.png');
+  background-repeat: no-repeat;
+  text-align: center;
+  position: relative;
+  z-index: 100 !important;
+  height: 36px;
+  margin-left: 6px;
+  margin-top: 0;
+}
+
+.footerSection {
+  color: #9D9D9D;
+  background-color: #222;
+  position: relative;
+  z-index: 1 !important; 
+}
+
+.footerCopyRight {
+  color: #FDCC00;
+  background-color: #222;
+  text-align: center;
+  position: relative;
+  margin-top: 90px;
+  z-index: 1 !important; 
+}
+
+.donateNowBtn{
+  background-color: #FDCC00 !important;
+  border-color: #FDCC00 !important;
+  color: #444 !important;
+  float:right;
+  margin-top: 8px !important;
+}
+
+
+/* END HOME CONTROLLER
+-------------------------------------------------- */
+
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
+@media (min-width: 770px){
+
+  .subNav{
+    background-color: #0C2B4B !important;
+    margin-top: 111px;
+    border-color:  #0C2B4B !important;
+    padding-left: 80px;
+  }
+
+  .aboutusTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 100 !important;
+    height: 36px;
+    top: 0;
+    left: 107px;
+    position: relative;
+  }
+
+  .aboutusSection{
+    background-color: white !important;
+    text-align: center;
+    margin-top: -36px;
+  }
+
+  .contactTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center; 
+    z-index: 100 !important;
+    height: 36px;
+    top: 119px !important;
+    left: 649px !important;
+    position: relative;
+  }
+
+  .contactSection{
+    background-color: white !important;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 83px;
+  }  
+
+  .ourImpactTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center; 
+    z-index: 100 !important;
+    height: 36px;
+    top: -14px !important;
+    left: 520px !important;
+    position: relative;
+  }
+
+  .ourImpactSection{
+    background-color: white !important;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 83px;
+  }    
+
+  .initiativesTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center; 
+    z-index: 100 !important;
+    height: 36px;
+    top: 119px !important;
+    left: 229px !important;
+    position: relative;
+  }  
+
+  .initiativesSection{
+    background-color: white !important;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 83px;
+  } 
+
+  .teamTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 0 !important;
+    position: relative;
+    height: 36px;
+    top: 0;
+    left: 191px;
+  } 
+
+  .aboutjayTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 0 !important;
+    position: relative;
+    height: 36px;
+    top: 0;
+    left: 278px;
+  }  
+
+}
+
+@media (max-width: 769px){
+  .subNav{
+    background-color: #0C2B4B !important;
+    margin-top: 111px;
+    border-color:  #0C2B4B !important;
+    padding-left: 0px;
+    text-align: center;
+    height: 126px;
+  }
+
+
+  .aboutusTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 0 !important;
+    position: relative;
+    height: 36px;
+    top: 0;
+    left: 9px;
+  }
+
+  .contactTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 0 !important;
+    position: relative;
+    height: 36px;
+    top: 0;
+    left: 9px;
+  }
+
+  .ourImpactTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center; 
+    z-index: 100 !important;
+    height: 36px;
+    top: -14px !important;
+    left: 20px !important;
+    position: relative;
+  }
+
+  .ourImpactSection{
+    background-color: white !important;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 83px;
+  }    
+
+  .initiativesTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center; 
+    z-index: 100 !important;
+    height: 36px;
+    top: 119px !important;
+    left: 8px !important;
+    position: relative;
+  }  
+
+  .initiativesSection{
+    background-color: white !important;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 83px;
+  } 
+
+  .contactSection{
+    background-color: white !important;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 83px;
+  }
+
+  .teamTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 0 !important;
+    position: relative;
+    height: 36px;
+    top: 0;
+    left: 9px;
+  } 
+
+  .aboutjayTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 0 !important;
+    position: relative;
+    height: 36px;
+    top: 0;
+    left: 9px;
+  }  
+
+  .aboutusSection{
+    background-color: white !important;
+    margin-top:-36px;
+    text-align: center;
+  }  
+}
+
 /* Large desktop */
-@media (min-width: 980px) { 
-  .topNav .container{
-    width: 100% !important;
-  }
-
-  .container {
-    width: 1700px !important;
-    overflow: hidden;
-    margin-left: -12px !important;
-  }
-
-  .missionStatement {
-    width: 100% !important;
-    height: 350px;
-    text-align: center;
-    padding-left: 90px;    
-
-  }
-
-  .bodyContainer .missionStatement{
-    margin-left: -170px !important;
-  } 
-
-
-  .takeAction {
-    color: white;
-    width: auto !important;
-    height: 750px;
-    background-color: #444;
-    text-align: center;
-    margin-top: 0px;
-    overflow:hidden;
-    padding-left: 90px;     
-  }
-
-  .bodyContainer .takeAction{
-  } 
-
-  .takeAction .col-md-12 {
-    overflow: hidden;
-    margin-left: -150px !important;
-  }
+@media (min-width: 885px) { 
 
   .makeDonation {
     background-image: url('childwCancerLrg.jpg') !important;
     height: 300px;
     margin-left:-180px !important;
-    width:auto !important;
-    margin-top: 0;
+    z-index: 0 !important;
+    margin-top: -36px;
+    position: relative;
     overflow: hidden;
   } 
 
@@ -187,46 +521,30 @@ body {
     color: white;
     text-align: center;
     margin-top: 20px;
+    padding-left:200px;
   }
 
 
+ }
 
-  .whitetab {
-    background-image: url('tabWhite.png');
-    background-repeat: no-repeat;
+ /* non large desktop */
+@media (max-width: 884px) { 
+
+  .makeDonation {
+    background-image: url('childwCancerMedium.jpg') !important;
+    height: 300px;
+    margin-left:-450px !important;
+    z-index: 1 !important;
+    margin-top: -36px;
+    position: relative;
+    overflow: hidden;
+  } 
+
+  .makeDonation .col-md-12{
+    color: white;
     text-align: center;
-    position: absolute;
-    z-index: 100 !important;
-    width: 100%;
-    height: 36px;
-  }
-
-  .missionGreytab {
-    background-image: url('tabGray.png');
-    background-repeat: no-repeat;
-    text-align: center;
-    position: absolute;
-    z-index: 100 !important;
-    width: 100%; 
-    height: 36px;
-    margin-top: -60px;
-  }
-
-
-  .donationGreytab {
-    background-image: url('tabGray.png');
-    background-repeat: no-repeat;
-    text-align: center;
-    position: absolute;
-    z-index: 100 !important;
-    width: 100%;
-    height: 36px;
-    margin-top: 0;
-  }
-
-  .footer {
-    width: 80% !important;
-    padding-left: 100px !important;
+    margin-top: 70px;
+    padding-left:450px;
   }
 
 
@@ -272,275 +590,3 @@ body {
 }
 
  
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) { 
-
-  .container {
-    width: 969px !important;
-    overflow: hidden;
-    margin-left: -10px !important;
-  }
-
-
-  .missionStatement {
-    width: 780px !important;
-    height: 350px;
-    text-align: center;
-    padding-left: 90px;
-  }
-
-
-  .takeAction {
-    color: white;
-    width: 969px !important;
-    height: 750px;
-    background-color: #444;
-    text-align: center;
-    padding-left: 0px;
-    margin-left: -10px !important;
-    margin-top: 0px;
-    overflow:hidden;
-  }
-
-  .takeAction .col-md-12{
-    margin-left: -100px !important;
-    overflow:hidden;
-  }
-
-    /* Pre footer splash responsiveness */
-  .makeDonation {
-    background-image: url('childwCancerMedium.jpg');
-    height: 300px !important;
-    margin-left:-350px !important;
-    width:1400px;
-    margin-top: 0;
-    overflow: hidden;
-  }   
-
-  .makeDonation .col-md-12{
-    text-align: center;
-    margin-left: 350px !important;
-    color: white;
-  }
-
-  .whitetab {
-    background-image: url('tabWhite.png');
-    background-repeat: no-repeat;
-    text-align: center;
-    position: absolute;
-    z-index: 100 !important;
-    width: 100%;
-    height: 36px;
-  }
-
-  .missionGreytab {
-    background-image: url('tabGray.png');
-    background-repeat: no-repeat;
-    text-align: center;
-    position: absolute;
-    z-index: 100 !important;
-    width: 100%; 
-    height: 36px;
-    margin-top: -60px;
-  }
-
-
-  .donationGreytab {
-    background-image: url('tabGray.png');
-    background-repeat: no-repeat;
-    text-align: center;
-    position: absolute;
-    z-index: 100 !important;
-    width: 100%;
-    height: 36px;
-    margin-top: 0;
-  }
-
-  .footer {
-    width: 80% !important;
-    overflow: hidden;
-  }
-
-}
- 
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) and (min-width: 481px)  { 
-
-  .container {
-    width: 768px !important;
-  }
-
-  .missionStatement {
-    width: 600px;
-    height: 350px !important;
-    padding-left: 40px;
-    overflow: hidden;
-    text-align: center;
-  }
-
-  .whitetab {
-    background-image: url('tabWhite.png');
-    background-repeat: no-repeat;
-    text-align: center;
-    position: absolute;
-    z-index: 100 !important;
-    width: 100%;
-    height: 36px;
-    margin-top: -20px;
-  }
-
-  .missionGreytab {
-    background-image: url('tabGray.png');
-    background-repeat: no-repeat;
-    text-align: center;
-    position: absolute;
-    z-index: 100 !important;
-    width: 100%; 
-    height: 36px;
-    margin-top: -60px;
-  }
-
-
-  .donationGreytab {
-    background-image: url('tabGray.png');
-    background-repeat: no-repeat;
-    text-align: center;
-    position: absolute;
-    z-index: 100 !important;
-    width: 100%;
-    height: 36px;
-    margin-top: 0;
-  }
-
-  .takeAction {
-    color: white;
-    width: 630px !important;
-    height: 750px;
-    background-color: #444;
-    margin-left: -45px !important;
-    padding-top: 20px;
-    margin-top: -20px;
-    overflow:hidden;
-  }
-
-  .takeAction .col-md-12 {
-    color: white;
-    padding-left: 80px;
-    text-align: center;
-  }
-
-  .makeDonation {
-    background-image: url('childwCancerMedium.jpg');
-    height: 300px;
-    margin-left:-500px !important;
-    width:1100px;
-    margin-top: 0;
-    padding-top: 80px;
-  }   
-
-  .makeDonation .col-md-12 {
-    margin-left: 400px !important;
-    text-align: center;
-    color: white;
-
-  }
-
- }
- 
-/* Landscape phones and down */
-@media (max-width: 480px) { 
-
-  .container {
-    width: 480px !important;
-  }
-
-  .missionStatement{
-    width: 450px !important;
-    height: 400px !important;
-    text-align: center;
-    padding-left: 40px;
-    overflow: hidden;
-  }
-
-  .missionStatement .col-md-12{
-    width: 400px !important;
-    text-align: center;
-    overflow: hidden;
-    margin-left: -50px;
-  }
-
-  .whitetab {
-    background-image: url('tabWhite.png');
-    background-repeat: no-repeat;
-    text-align: center;
-    position: absolute;
-    z-index: 100 !important;
-    width: 100%;
-    height: 36px;
-    margin-top: -20px;
-  }
-
-  .missionGreytab {
-    background-image: url('tabGray.png');
-    background-repeat: no-repeat;
-    text-align: center;
-    position: absolute;
-    z-index: 100 !important;
-    width: 100%; 
-    height: 36px;
-    margin-top: -60px;
-  }
-
-
-  .donationGreytab {
-    background-image: url('tabGray.png');
-    background-repeat: no-repeat;
-    text-align: center;
-    position: absolute;
-    z-index: 100 !important;
-    width: 100%;
-    height: 36px;
-    margin-top: 0;
-  }
-
-  .takeAction {
-    color: white;
-    width: 480px !important;
-    height: 750px;
-    margin-left: -30px !important;
-    background-color: #444;
-    margin-top: -20px;
-    overflow:hidden;
-  }
-
-  .takeAction .col-md-12 {
-    margin-left: 0px !important;
-    width: 400px !important;
-    padding-top:20px;
-    text-align: center;
-    margin-top: 10px;
-    color: white;
-
-  }
-
-  .makeDonation {
-    background-image: url('childwCancerMedium.jpg');
-    height: 250px;
-    text-align: center;
-    margin-left:-520px !important;
-    width:980px;
-    margin-top: 0;
-    padding-top: 80px;
-  }  
-
-  .makeDonation .col-md-12 {
-    margin-left: 380px !important;
-    color: white;
-  }
-
-  .footer {
-    width: 330px !important;
-    margin-left: -15px !important;
-    overflow: hidden;
-  }
- }

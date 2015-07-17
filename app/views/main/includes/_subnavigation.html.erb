@@ -1,0 +1,20 @@
+
+<!-- NAVIGATION SECTION -->
+<nav class="navbar-default  subNav">
+    <div class="container-fluid">
+
+        <!-- sub navigation panel -->
+        <div class="" id="bs-example-navbar-collapse-2">
+            <ul class="nav navbar-nav subNavLink">
+                <li <% if params[:action] == 'aboutus' %>   class="active" <% end %> ><%= link_to 'OVERVIEW',  aboutus_path %></li>
+                <li <% if params[:action] == 'team' %>      class="active" <% end %> ><%= link_to 'TEAM',      team_path %></li>
+                <li <% if params[:action] == 'aboutjay' %>  class="active" <% end %> ><%= link_to 'ABOUT JAY', aboutjay_path %></li>                   
+            </ul>
+        </div><!-- /.navbar-collapse -->
+
+    </div><!-- /.container-fluid -->
+</nav>  
+<div class="<%= params[:action] %>Tab"></div> 
+<!-- END NAV SECTION -->
+
+
