@@ -50,27 +50,28 @@ body {
   background-image: url('jaylogo.jpg');
   background-repeat: no-repeat;
   background-color: #C4C5C7 !important;
-  height: 90px;
+  height: 69px;
 }
 
 .topNav{
   margin-top: 50px;
-  height:63px;
   background-color: #FDCC00 !important;
-  border-color: #fdcc00 !important;
+  border: none !important;
+}
+
+.topNav .active a{
+  background-color: #dbaf02 !important;
+  height: 69px;
+}
+
+.topNav .active a span{
+    display:inline-block;
+    border-bottom:1px solid white;
+    padding-bottom:2px;
 }
 
 .topNavLinks{
-  padding-top:18px;
   font-size: 18px;
-}
-
-.subNav{
-  background-color: #0C2B4B !important;
-  margin-top: 111px;
-  border-color:  #0C2B4B !important;
-  padding-left: 65px;
-  height: 45px;
 }
 
 .subNav a{
@@ -174,7 +175,7 @@ body {
   letter-spacing: -1px;
 }
 
-/* Home Controller 
+/* Information Sections 
 ------------------------- */
 .missionStatement {
   background-color: white !important;
@@ -184,6 +185,7 @@ body {
 
 }
 
+
 .takeAction {
   color: white;
   height: 750px;
@@ -191,6 +193,18 @@ body {
   text-align: center;
   position: relative;
   margin-top: -36px;
+  z-index: 1 !important;
+  margin-left: -30px !important;
+  padding-left: 90px;   
+}
+
+.takeActionSection {
+  color: white;
+  height: 750px;
+  background-color: #444;
+  text-align: center;
+  position: relative;
+  margin-top: 119px;
   z-index: 1 !important;
   margin-left: -30px !important;
   padding-left: 90px;   
@@ -208,6 +222,15 @@ body {
   text-align: center;
   z-index: 100 !important;
   margin-left: -55px;
+  height: 36px;
+}
+
+.takeactiontab {
+  background-image: url('tabWhite.png');
+  background-repeat: no-repeat;
+  text-align: center;
+  z-index: 100 !important;
+  margin-left: 305px;
   height: 36px;
 }
 
@@ -268,6 +291,13 @@ body {
 
 @media (min-width: 770px){
 
+  .subNav{
+    background-color: #0C2B4B !important;
+    margin-top: 111px;
+    border-color:  #0C2B4B !important;
+    padding-left: 80px;
+  }
+
   .aboutusTab {
     background-image: url('tabGray.png');
     background-repeat: no-repeat;
@@ -275,15 +305,72 @@ body {
     z-index: 100 !important;
     height: 36px;
     top: 0;
-    left: 27px;
+    left: 107px;
     position: relative;
   }
 
   .aboutusSection{
     background-color: white !important;
-    margin-top:155px;
     text-align: center;
+    margin-top: -36px;
   }
+
+  .contactTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center; 
+    z-index: 100 !important;
+    height: 36px;
+    top: 119px !important;
+    left: 649px !important;
+    position: relative;
+  }
+
+  .contactSection{
+    background-color: white !important;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 83px;
+  }  
+
+  .ourImpactTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center; 
+    z-index: 100 !important;
+    height: 36px;
+    top: -14px !important;
+    left: 520px !important;
+    position: relative;
+  }
+
+  .ourImpactSection{
+    background-color: white !important;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 83px;
+  }    
+
+  .initiativesTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center; 
+    z-index: 100 !important;
+    height: 36px;
+    top: 119px !important;
+    left: 229px !important;
+    position: relative;
+  }  
+
+  .initiativesSection{
+    background-color: white !important;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 83px;
+  } 
 
   .teamTab {
     background-image: url('tabGray.png');
@@ -293,7 +380,7 @@ body {
     position: relative;
     height: 36px;
     top: 0;
-    left: 110px;
+    left: 191px;
   } 
 
   .aboutjayTab {
@@ -304,12 +391,22 @@ body {
     position: relative;
     height: 36px;
     top: 0;
-    left: 200px;
+    left: 278px;
   }  
 
 }
 
 @media (max-width: 769px){
+  .subNav{
+    background-color: #0C2B4B !important;
+    margin-top: 111px;
+    border-color:  #0C2B4B !important;
+    padding-left: 0px;
+    text-align: center;
+    height: 126px;
+  }
+
+
   .aboutusTab {
     background-image: url('tabGray.png');
     background-repeat: no-repeat;
@@ -318,7 +415,64 @@ body {
     position: relative;
     height: 36px;
     top: 0;
-    left: -60px;
+    left: 9px;
+  }
+
+  .contactTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 0 !important;
+    position: relative;
+    height: 36px;
+    top: 0;
+    left: 9px;
+  }
+
+  .ourImpactTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center; 
+    z-index: 100 !important;
+    height: 36px;
+    top: -14px !important;
+    left: 20px !important;
+    position: relative;
+  }
+
+  .ourImpactSection{
+    background-color: white !important;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 83px;
+  }    
+
+  .initiativesTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center; 
+    z-index: 100 !important;
+    height: 36px;
+    top: 119px !important;
+    left: 8px !important;
+    position: relative;
+  }  
+
+  .initiativesSection{
+    background-color: white !important;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 83px;
+  } 
+
+  .contactSection{
+    background-color: white !important;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 83px;
   }
 
   .teamTab {
@@ -329,12 +483,23 @@ body {
     position: relative;
     height: 36px;
     top: 0;
-    left: 110px;
+    left: 9px;
   } 
+
+  .aboutjayTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 0 !important;
+    position: relative;
+    height: 36px;
+    top: 0;
+    left: 9px;
+  }  
 
   .aboutusSection{
     background-color: white !important;
-    margin-top:150px;
+    margin-top:-36px;
     text-align: center;
   }  
 }
