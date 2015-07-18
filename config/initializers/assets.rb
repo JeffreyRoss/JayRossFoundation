@@ -12,4 +12,4 @@ Rails.application.config.assets.version = '1.0'
 
 #heroku platform static assets config setting
 # see https://devcenter.heroku.com/articles/ruby-support#injected-plugins
-config.serve_static_assets = true
+Rails.application.config.serve_static_assets = true
