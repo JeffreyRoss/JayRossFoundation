@@ -1,33 +1,41 @@
 class MainController < ApplicationController
   def home
-    @activePaths = Array['']    
+    @pageTitle = "JRFoundation"
+    @activeMenuPaths = Array['']    
   end
 
   def aboutus
-    @activePaths = Array['aboutus','team','aboutjay']
+    @pageTitle = "JRFoundation - About Us"
+    @activeMenuPaths = Array['aboutus','team','aboutjay']
   end 
 
   def team
-    @activePaths = Array['aboutus','team','aboutjay']
+    @pageTitle = "JRFoundation - Team"
+    @activeMenuPaths = Array['aboutus','team','aboutjay']
   end
 
   def aboutjay
-    @activePaths = Array['aboutus','team','aboutjay']
+    @pageTitle = "JRFoundation - About Jay"
+    @activeMenuPaths = Array['aboutus','team','aboutjay']
   end
 
   def initiatives
-    @activePaths = Array['initiatives']    
+    @pageTitle = "JRFoundation - Initiatives"
+    @activeMenuPaths = Array['initiatives']    
   end
 
   def takeaction
-    @activePaths = Array['takeaction']    
+    @pageTitle = "JRFoundation - Take Action"
+    @activeMenuPaths = Array['takeaction']    
   end
 
   def ourimpact
-    @activePaths = Array['ourimpact']    
+    @pageTitle = "JRFoundation - Our Impact"
+    @activeMenuPaths = Array['ourimpact']    
   end
 
   def contact
-    @activePaths = Array['contact']    
+    @pageTitle = "JRFoundation - Contact Us"
+    @activeMenuPaths = Array['contact']    
   end
 end
