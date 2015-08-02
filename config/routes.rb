@@ -14,5 +14,9 @@ Rails.application.routes.draw do
   get '/our-impact',  to: 'main#ourimpact',   as: 'ourimpact' 
   get '/contact',     to: 'main#contact',     as: 'contact'  
   get '/team',        to: 'main#team',        as: 'team'  
-  get '/about-jay',   to: 'main#aboutjay',    as: 'aboutjay'      
+  get '/about-jay',   to: 'main#aboutjay',    as: 'aboutjay'    
+
+
+  devise_for :users
+  resources :users 
 end
