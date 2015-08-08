@@ -1,20 +1,31 @@
 == README
 
-This is the codebase for The Jay Ross Foundation Project. Below are some dependencies and other technical details useful to deploying this Rails application. 
+This is the codebase for The Jay Ross Foundation Project. 
 
-Things you may want to cover:
+Technical Overview of Application:
 
-* Ruby version - Ruby 2.2.2p95
+* Ruby version - Ruby (2.2.2p95)
 
-* Rails version - Rails 4.2.0
+* Rails version - Rails (4.2.0)
 
-* Bootstrap version - Bootstrap 3.3.5
+* Web Server - Puma (2.12.2)
 
-* Database Engine - PostGres 9.4.4
+* Bootstrap version - Bootstrap (3.3.5)
+
+* Database Engine - PostGres (9.4.4)
+
+* Authentication - Devise (3.5.1)
+
+# Testing Framework details
+
+- Rspec 3.2.3
+- Capybara 2.4.4
 
 * System dependencies
 
 * Configuration
+	running on port:3000
+
 
 * Database creation
 

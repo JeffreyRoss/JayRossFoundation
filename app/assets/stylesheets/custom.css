@@ -36,8 +36,43 @@ body {
   border-color: #444 !important;
 }
 
+.auth__or{
+  position:relative;
+  font-size:18px;
+  color:#c8c8c8;
+  margin:20px 0;
+  padding:10px 0
+}
+.auth__or hr{
+  background-color:#d5d5d5;
+  height:1px;
+  margin-top:0px !important;
+  margin-bottom:0px !important
+}
+.auth__or span{
+  display:block;
+  position:absolute;
+  left:50%;
+  top:-2px;
+  margin-left:-25px;
+  background-color:#fff;
+  width:50px;
+  text-align:center
+}
+.auth__providers__provider{
+  margin-top: 10px;
+}
+.auth_providers {
+  padding-top: 20px;
+}
+.facebook{
+  text-align: right;
+}
+.twitter{
+  text-align: left;
+}
 
-
+.btn[data-provider=twitter],.card__actions a[data-provider=twitter]{background:#00ACED;border-color:#0099D3}.btn[data-provider=twitter]:hover,.card__actions a[data-provider=twitter]:hover{background:#21c2ff}.btn[data-provider=facebook],.card__actions a[data-provider=facebook]{background:#3B5998;border-color:#2F487C}.btn[data-provider=facebook]:hover,.card__actions a[data-provider=facebook]:hover{background:#4c70ba}.btn[data-provider=linkedin]
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -72,6 +107,14 @@ body {
 
 .topNavLinks{
   font-size: 18px;
+}
+
+.SignedInText{
+  margin-top: 15px;
+}
+
+.SignOutLI{
+  padding-right:16px;
 }
 
 .subNav a{
@@ -286,6 +329,7 @@ body {
 -------------------------------------------------- */
 
 
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
@@ -334,6 +378,40 @@ body {
     margin-top: 83px;
   }  
 
+  .dashboardTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 100 !important;
+    height: 36px;
+    top: 0;
+    left: 113px;
+    position: relative;
+  }
+
+  .dashboardSection{
+    background-color: white !important;
+    text-align: center;
+    margin-top: -36px;
+  }
+
+  .manageusersTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 100 !important;
+    height: 36px;
+    top: 0;
+    left: 240px;
+    position: relative;
+  }
+
+  .manageusersSection{
+    background-color: white !important;
+    text-align: center;
+    margin-top: -36px;
+  }
+
   .ourImpactTab {
     background-image: url('tabGray.png');
     background-repeat: no-repeat;
@@ -344,6 +422,14 @@ body {
     left: 520px !important;
     position: relative;
   }
+
+  .loginSection{
+    background-color: white !important;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 83px;
+  } 
 
   .ourImpactSection{
     background-color: white !important;
@@ -448,6 +534,14 @@ body {
     margin-top: 83px;
   }    
 
+  .deviseSection{
+    background-color: white !important;
+    text-align: left;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 83px;
+  }    
+
   .initiativesTab {
     background-image: url('tabGray.png');
     background-repeat: no-repeat;
@@ -496,6 +590,44 @@ body {
     top: 0;
     left: 9px;
   }  
+
+  .dashboardTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 0 !important;
+    position: relative;
+    height: 36px;
+    top: 0;
+    left: 9px;
+  }   
+
+  .dashboardSection{
+    background-color: white !important;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: -36px;
+  }
+
+  .manageusersTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 0 !important;
+    position: relative;
+    height: 36px;
+    top: 0;
+    left: 9px;
+  } 
+
+  .manageusersSection{
+    background-color: white !important;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: -36px;
+  }
 
   .aboutusSection{
     background-color: white !important;

@@ -1,0 +1,59 @@
+<!-- BODY INFORMATION CONTAINER -->
+<div class="container-fluid">
+
+  <!-- LOG IN SECTION  -->
+  <div class="">         
+  <div class="row loginSection">
+    <div class="col-md-12">
+      <h2>Please Log In, or Sign Up</h2>
+
+      <div class='row auth__providers'>
+        <div class='col-md-6 auth__providers__provider facebook'>
+          <a class="btn btn-primary" data-flow="login" data-provider="facebook" href="/o/facebook?flow=login"><i class='sico-facebook sico-fixed'></i>
+          Facebook
+          </a>
+        </div>
+        <div class='col-md-6 auth__providers__provider twitter'>
+          <a class="btn btn-primary" data-flow="login" data-provider="twitter" href="/o/twitter?flow=login"><i class='sico-fixed sico-twitter'></i>
+          Twitter
+          </a>
+        </div>
+      </div>
+
+      <div class='auth__or'>
+        <hr>
+        <span>or</span>
+      </div>
+
+      <div>
+        <%= form_for(@user, url: session_path(@user)) do |f| %>
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true %>
+          </div>
+
+          <div class="field">
+            <%= f.label :password %><br />
+            <%= f.password_field :password, autocomplete: "off" %>
+          </div>
+
+          <% if devise_mapping.rememberable? -%>
+            <div class="field">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+          <% end -%>
+
+          <div class="actions">
+            <%= f.submit "Log in" %>
+          </div>
+        <% end %>
+
+        <%= render "users/shared/links" %>
+      </div>
+    </div>
+  </div>
+
+
+</div> 
+<!-- /BODY container -->

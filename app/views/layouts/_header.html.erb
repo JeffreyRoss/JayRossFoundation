@@ -27,21 +27,39 @@
         <!-- sub navigation panel -->
         <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav topNavLinks">
-                <li <% if @activePaths.include?('aboutus') %>     class="active" <% end %> ><%= link_to 'ABOUT US', aboutus_path %> </li>
-                <li <% if @activePaths.include?('initiatives') %> class="active" <% end %> ><%= link_to 'INITIATIVES', initiatives_path %></li>
-                <li <% if @activePaths.include?('takeaction') %>  class="active" <% end %> ><%= link_to 'TAKE ACTION', takeaction_path %></li>
-                <li <% if @activePaths.include?('ourimpact') %>   class="active" <% end %> ><%= link_to 'OUR IMPACT', ourimpact_path %></li>
-                <li <% if @activePaths.include?('contact') %>     class="active" <% end %> ><%= link_to 'CONTACT', contact_path %></li>                    
+                <!-- TODO: move logic for active tab to the main_helper -->
+                <li <% if @activeMenuPaths.include?('aboutus') %>     class="active" <% end %> ><%= link_to 'ABOUT US',     aboutus_path %> </li>
+                <li <% if @activeMenuPaths.include?('initiatives') %> class="active" <% end %> ><%= link_to 'INITIATIVES',  initiatives_path %></li>
+                <li <% if @activeMenuPaths.include?('takeaction') %>  class="active" <% end %> ><%= link_to 'TAKE ACTION',  takeaction_path %></li>
+                <li <% if @activeMenuPaths.include?('ourimpact') %>   class="active" <% end %> ><%= link_to 'OUR IMPACT',   ourimpact_path %></li>
+                <% if user_signed_in? %>
+                    <li <% if @activeMenuPaths.include?('admin') %>  class="active" <% end %> ><%= link_to 'ADMIN', admin_path %></li> 
+                <% end %>
             </ul>
-            <form class="navbar-form navbar-right loginForm">
-                <div class="form-group">
-                    <input type="text" placeholder="Email" class="form-control">
-                </div>
-                <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control">
-                </div>
-                <button type="submit" class="btn btn-success">Sign in</button>
-            </form>
+            <% if user_signed_in? %>
+                <ul class="nav navbar-nav navbar-right topNavLinks SignedInUL">
+                    <li class="SignedInText">
+                        Signed In as  
+                        <%= current_user.first_name %> <%= current_user.last_name  %>
+                    </li>
+                    <li class="SignOutLI">
+                        <%= form_for current_user, :url => "/users/sign_out", :html => {:class => "navbar-form navbar-right loginForm", :method => :delete} do |f| %>
+                            <button type="submit" class="btn btn-success">Sign Out</button>
+                        <% end %>
+                    </li>
+                </ul>
+            <% else %>
+                <%= form_for @user, :url => "/users/sign_in", :html => {:class => "navbar-form navbar-right loginForm"} do |f| %>
+                    <div class="form-group">
+                        <%= f.email_field :email, :placeholder => "Email", :class => "form-control", autofocus: true %>                        
+                    </div>
+                    <div class="form-group">
+                        <%= f.password_field :password, :placeholder => "Password", :class => "form-control", autocomplete: "off" %>
+                    </div>
+                    <button type="submit" class="btn btn-success">Sign in</button>
+                <% end %>
+            <% end %>
+
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>  

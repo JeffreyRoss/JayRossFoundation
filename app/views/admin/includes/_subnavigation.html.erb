@@ -1,0 +1,19 @@
+<!-- NAVIGATION SECTION -->
+<nav class="navbar-default  subNav">
+    <div class="container-fluid">
+
+        <!-- sub navigation panel -->
+        <div class="" id="bs-example-navbar-collapse-2">
+            <ul class="nav navbar-nav subNavLink">
+            	<!-- TODO: move active class logic to admin helper -->
+                <li <% if params[:action] == 'dashboard' %> class="active" <% end %> ><%= link_to 'DASHBOARD',  admin_path %></li>                
+                <li <% if params[:action] == 'manageusers' %> class="active" <% end %> ><%= link_to 'MANAGE USERS',  admin_users_path %></li>                 
+            </ul>
+        </div><!-- /.navbar-collapse -->
+
+    </div><!-- /.container-fluid -->
+</nav>  
+<div class="<%= params[:action] %>Tab"></div> 
+<!-- END NAV SECTION -->
+
+
