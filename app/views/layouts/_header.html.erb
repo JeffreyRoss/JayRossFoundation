@@ -27,13 +27,12 @@
         <!-- sub navigation panel -->
         <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav topNavLinks">
-                <!-- TODO: move logic for active tab to the main_helper -->
-                <li <% if @activeMenuPaths.include?('aboutus') %>     class="active" <% end %> ><%= link_to 'ABOUT US',     aboutus_path %> </li>
-                <li <% if @activeMenuPaths.include?('initiatives') %> class="active" <% end %> ><%= link_to 'INITIATIVES',  initiatives_path %></li>
-                <li <% if @activeMenuPaths.include?('takeaction') %>  class="active" <% end %> ><%= link_to 'TAKE ACTION',  takeaction_path %></li>
-                <li <% if @activeMenuPaths.include?('ourimpact') %>   class="active" <% end %> ><%= link_to 'OUR IMPACT',   ourimpact_path %></li>
+                <li <% if activeMenu?(@activeMenuPaths,'aboutus') %>     class="active" <% end %> ><%= link_to 'ABOUT US',     aboutus_path %> </li>
+                <li <% if activeMenu?(@activeMenuPaths,'initiatives') %> class="active" <% end %> ><%= link_to 'INITIATIVES',  initiatives_path %></li>
+                <li <% if activeMenu?(@activeMenuPaths,'takeaction') %>  class="active" <% end %> ><%= link_to 'TAKE ACTION',  takeaction_path %></li>
+                <li <% if activeMenu?(@activeMenuPaths,'ourimpact') %>   class="active" <% end %> ><%= link_to 'OUR IMPACT',   ourimpact_path %></li>
                 <% if user_signed_in? %>
-                    <li <% if @activeMenuPaths.include?('admin') %>  class="active" <% end %> ><%= link_to 'ADMIN', admin_path %></li> 
+                    <li <% if activeMenu?(@activeMenuPaths,'admin') %>  class="active" <% end %> ><%= link_to 'ADMIN', admin_path %></li> 
                 <% end %>
             </ul>
             <% if user_signed_in? %>

@@ -27,6 +27,10 @@ body {
   margin-left: 5px !important;
 }
 
+/* Authentication Styles
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
 .loginForm{
   padding-top:5px !important;
 }
@@ -72,7 +76,20 @@ body {
   text-align: left;
 }
 
-.btn[data-provider=twitter],.card__actions a[data-provider=twitter]{background:#00ACED;border-color:#0099D3}.btn[data-provider=twitter]:hover,.card__actions a[data-provider=twitter]:hover{background:#21c2ff}.btn[data-provider=facebook],.card__actions a[data-provider=facebook]{background:#3B5998;border-color:#2F487C}.btn[data-provider=facebook]:hover,.card__actions a[data-provider=facebook]:hover{background:#4c70ba}.btn[data-provider=linkedin]
+.btn[data-provider=twitter],.card__actions 
+
+a[data-provider=twitter]{background:#00ACED;border-color:#0099D3}
+.btn[data-provider=twitter]:hover,.card__actions a[data-provider=twitter]:hover{background:#21c2ff}
+.btn[data-provider=facebook],.card__actions a[data-provider=facebook]{background:#3B5998;border-color:#2F487C}
+
+.new_user input,label{
+  width: 25% !important;
+  text-align: left;
+}
+
+.new_user .sharedLinks{
+  text-align: left !important;
+}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */

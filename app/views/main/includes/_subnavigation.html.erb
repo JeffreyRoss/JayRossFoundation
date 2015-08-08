@@ -6,10 +6,9 @@
         <!-- sub navigation panel -->
         <div class="" id="bs-example-navbar-collapse-2">
             <ul class="nav navbar-nav subNavLink">
-                <!-- TODO: move logic for active tab to the main_helper -->
-                <li <% if params[:action] == 'aboutus' %>   class="active" <% end %> ><%= link_to 'OVERVIEW',  aboutus_path %></li>
-                <li <% if params[:action] == 'team' %>      class="active" <% end %> ><%= link_to 'TEAM',      team_path %></li>
-                <li <% if params[:action] == 'aboutjay' %>  class="active" <% end %> ><%= link_to 'ABOUT JAY', aboutjay_path %></li>                   
+                <li <% if activeSubMenu?('aboutus') %>   class="active" <% end %> ><%= link_to 'OVERVIEW',  aboutus_path %></li>
+                <li <% if activeSubMenu?('team') %>      class="active" <% end %> ><%= link_to 'TEAM',      team_path %></li>
+                <li <% if activeSubMenu?('aboutjay') %>  class="active" <% end %> ><%= link_to 'ABOUT JAY', aboutjay_path %></li>                   
             </ul>
         </div><!-- /.navbar-collapse -->
 
