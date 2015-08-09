@@ -23,7 +23,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       redirect_to :aboutus
     else
       @user.save
-      redirect_to :new_user_registration, alert: @user.errors.full_messages
+      render 'new'
     end
 
   end

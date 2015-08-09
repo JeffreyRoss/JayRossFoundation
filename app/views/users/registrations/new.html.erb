@@ -7,22 +7,9 @@
     <div class="col-md-12">
       <h2>Please Sign Up</h2>
 
-      <div class="">
-        <div class="row">
-          <!-- display messaging -->
-          <% if notice %>
-            <p class="alert alert-success"><%= notice %></p>
-          <% end %>
-          <% if alert %>
-            <p class="alert alert-danger"><%= alert %></p>
-          <% end %>
-
-        </div>
-      </div>
-
       <div class="auth__internal">      
 
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= form_for(@user, url: registration_path(@user)) do |f| %>
           <%= devise_error_messages! %>
 
           <div class="field">
