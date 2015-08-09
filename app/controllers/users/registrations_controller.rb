@@ -1,17 +1,31 @@
 class Users::RegistrationsController < Devise::RegistrationsController
-# before_filter :configure_sign_up_params, only: [:create]
+
+#before_filter :configure_sign_up_params, only: [:create]
 # before_filter :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
   def new
+    #set menu vars
     @activeMenuPaths = Array['dashboard','admin']
   end
 
   # POST /resource
   def create
+    #set menu vars
     @activeMenuPaths = Array['dashboard','admin']
-    @user = User.new(email:'Jeffrey1.ross@gmail.com', first_name:'Jeffrey', middle_name:'R',last_name:'Ross',home_phone:'850-766-3855',mobile_phone:'453-545-6767',password:'Password123',password_confirmation:'Password123')
-    @user.save
+
+    #build user from sing up form
+    @user = User.new(user_params)
+
+    #valid user obj and save or redirect
+    if @user.valid?
+      @user.save
+      redirect_to :aboutus
+    else
+      @user.save
+      redirect_to :new_user_registration, alert: @user.errors.full_messages
+    end
+
   end
 
   # GET /resource/edit
@@ -38,12 +52,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
+  #protected
 
   # If you have extra params to permit, append them to the sanitizer.
-  # def configure_sign_up_params
-  #   devise_parameter_sanitizer.for(:sign_up) << :attribute
-  # end
+  #def configure_sign_up_params
+     #devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:first_name, :middle_name, :last_name, :home_phone, :mobile_phone, :email, :password, :encrypted_password) } 
+  #end
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_account_update_params
@@ -62,6 +76,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   private
   # Using a private method to encapsulate the permissible parameters
   def user_params
-    params.require(:user).permit(:email, :password)
+    params.require(:user).permit(:first_name, :middle_name, :last_name, :home_phone, :mobile_phone, :email, :password, :encrypted_password)
   end
 end

@@ -8,8 +8,6 @@ class User < ActiveRecord::Base
 			:trackable, 
 			:validatable
 
-	#attr_accessor :email, :password, :encrypted_password, :password_confirmation, :first_name, :middle_name, :last_name, :home_phone, :mobile_phone
-
 	before_save :encrypt_password
 
 	validates_confirmation_of :encrypted_password

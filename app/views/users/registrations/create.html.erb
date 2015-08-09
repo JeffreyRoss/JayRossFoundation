@@ -1,12 +1,19 @@
 <!-- BODY INFORMATION CONTAINER -->
 <div class="container-fluid">
 
-  <!-- OUR IMPACT SECTION  -->
+  <!-- SIGN UP SECTION  -->
   <div class="">         
-  <div class="row deviseSection">
-    <div class="ourImpactTab"></div>  
+  <div class="row signUpSection"> 
     <div class="col-md-12">
-      <%= debug(params) %>
+      <h2>Please Sign Up</h2>
+
+      <div class="notificationBox">
+        <div class="row">
+          <%= debug(@user.save!) %>
+        </div>
+      </div>
+
+
     </div>
   </div>
 

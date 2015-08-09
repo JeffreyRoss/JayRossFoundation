@@ -34,14 +34,6 @@
     <body>
         <!-- display header partial -->
         <%= render 'layouts/header' %>
-
-        <!-- display messaging -->
-        <% if notice %>
-          <p class="alert alert-success"><%= notice %></p>
-        <% end %>
-        <% if alert %>
-          <p class="alert alert-danger"><%= alert %></p>
-        <% end %>
         
         <!-- display controller view -->
         <%= yield %>

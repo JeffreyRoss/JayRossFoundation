@@ -30,6 +30,18 @@ body {
 /* Authentication Styles
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
+.loginSection{
+    background-color: white !important;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 83px;
+} 
+
+.notificationBox .row{
+  background-color: #FFEBE8;
+  border: red 1px solid;
+}
 
 .loginForm{
   padding-top:5px !important;
@@ -83,12 +95,24 @@ a[data-provider=twitter]{background:#00ACED;border-color:#0099D3}
 .btn[data-provider=facebook],.card__actions a[data-provider=facebook]{background:#3B5998;border-color:#2F487C}
 
 .new_user input,label{
-  width: 25% !important;
+  width: 300px !important;
   text-align: left;
 }
 
 .new_user .sharedLinks{
   text-align: left !important;
+}
+
+/* SIGN UP Styles
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+.signUpSection{
+    background-color: white !important;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 83px;
 }
 
 /* CUSTOMIZE THE NAVBAR
@@ -439,14 +463,6 @@ a[data-provider=twitter]{background:#00ACED;border-color:#0099D3}
     left: 520px !important;
     position: relative;
   }
-
-  .loginSection{
-    background-color: white !important;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-top: 83px;
-  } 
 
   .ourImpactSection{
     background-color: white !important;
