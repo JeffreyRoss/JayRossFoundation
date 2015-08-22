@@ -57,10 +57,11 @@ group :development, :test do
 
 	# Rspec Rails 
 	gem 'rspec-rails', '~> 3.2.1'
-
 	gem 'factory_girl_rails'
 	gem 'capybara'
 	gem 'database_cleaner'	
+	gem 'ffaker'
+	gem 'shoulda-matchers'
 
 	# Pry
 	gem 'pry', '~> 0.10.1'

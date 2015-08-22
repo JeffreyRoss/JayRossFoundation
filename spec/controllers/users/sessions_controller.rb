@@ -1,10 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe MainController, type: :controller do
-
   describe "GET #home" do
-  	before(:each) do  
-      @user = build(:user)
+  	before(:each) do  	
   		get :home
   	end
 

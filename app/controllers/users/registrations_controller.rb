@@ -76,6 +76,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   private
   # Using a private method to encapsulate the permissible parameters
   def user_params
-    params.require(:user).permit(:first_name, :middle_name, :last_name, :home_phone, :mobile_phone, :email, :password, :encrypted_password)
+    params.require(:user).permit(:first_name, :middle_name, :last_name, :home_phone, :mobile_phone, :email, :password)
   end
 end
