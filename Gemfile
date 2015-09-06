@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 ruby "2.2.2"
 
 #Servers
@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 #Authentication 
 gem 'devise', '~>3.5.1'
+gem 'omniauth-facebook'
+gem 'koala'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

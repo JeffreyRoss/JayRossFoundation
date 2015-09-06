@@ -4,7 +4,6 @@ RSpec.describe MainController, type: :controller do
 
   describe "GET #home" do
   	before(:each) do  
-      @user = build(:user)
   		get :home
   	end
 

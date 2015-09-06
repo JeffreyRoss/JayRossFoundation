@@ -40,6 +40,9 @@
                     <li class="SignedInText">
                         Signed In as  
                         <%= current_user.first_name %> <%= current_user.last_name  %>
+                        <% if not current_user.images.blank? %>
+                            <%= image_tag(current_user.images, :alt => "profile", :class => "profile") %>
+                        <% end %>
                     </li>
                     <li class="SignOutLI">
                         <%= form_for current_user, :url => "/users/sign_out", :html => {:class => "navbar-form navbar-right loginForm", :method => :delete} do |f| %>
@@ -48,7 +51,7 @@
                     </li>
                 </ul>
             <% else %>
-                <%= form_for @user, :url => "/users/sign_in", :html => {:class => "navbar-form navbar-right loginForm"} do |f| %>
+                <!--<%= form_for @user, :url => "/users/sign_in", :html => {:class => "navbar-form navbar-right loginForm"} do |f| %>
                     <div class="form-group">
                         <%= f.email_field :email, :placeholder => "Email", :class => "form-control", autofocus: true %>                        
                     </div>
@@ -56,7 +59,10 @@
                         <%= f.password_field :password, :placeholder => "Password", :class => "form-control", autocomplete: "off" %>
                     </div>
                     <button type="submit" class="btn btn-success">Sign in</button>
-                <% end %>
+                <% end %>-->
+                <div class="navbar-form navbar-right loginForm">
+                    <%= link_to '<button type="submit" class="btn btn-success">Log In</button>'.html_safe, "/users/sign_in" %>                    
+                </div>
             <% end %>
 
         </div><!-- /.navbar-collapse -->

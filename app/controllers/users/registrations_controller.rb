@@ -5,6 +5,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # GET /resource/sign_up
   def new
+    #set page title
+    @pageTitle = "Sign Up"
+
     #set menu vars
     @activeMenuPaths = Array['dashboard','admin']
   end

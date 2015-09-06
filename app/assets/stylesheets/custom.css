@@ -52,6 +52,10 @@ body {
   border-color: #444 !important;
 }
 
+.profile{
+  margin-top: -10px !important;
+}
+
 .auth__or{
   position:relative;
   font-size:18px;

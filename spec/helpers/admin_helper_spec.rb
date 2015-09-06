@@ -11,5 +11,25 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe AdminHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+	include AdminHelper
+	
+	describe "activeSubMenu?" do
+
+
+  	context 'with parameter' do
+  		before(:each) do
+  			activeSubMenu?("aboutus")
+  		end
+	    it "should set the params action" do
+	     	expect(params[:action]).to eql('aboutus')
+	    end
+	end
+
+	context 'with no parameter' do
+		before(:each) do
+  			activeSubMenu?()
+  		end
+	    it "should fail" 
+	end
+  end
 end

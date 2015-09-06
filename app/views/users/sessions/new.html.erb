@@ -21,9 +21,12 @@
 
       <div class="row auth__providers">
         <div class="col-md-6 auth__providers__provider facebook">
-          <a class="btn btn-primary" data-flow="login" data-provider="facebook" href="/o/facebook?flow=login"><i class='sico-facebook sico-fixed'></i>
+          <!--<a class="btn btn-primary" data-flow="login" data-provider="facebook" href="/o/facebook?flow=login"><i class='sico-facebook sico-fixed'></i>
           Facebook
-          </a>
+          </a>-->
+          <fb:login-button scope="public_profile,email" data-size="xlarge" onlogin="checkLoginState();">
+          </fb:login-button>
+          <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
         </div>
         <div class="col-md-6 auth__providers__provider twitter">
           <a class="btn btn-primary" data-flow="login" data-provider="twitter" href="/o/twitter?flow=login"><i class='sico-fixed sico-twitter'></i>

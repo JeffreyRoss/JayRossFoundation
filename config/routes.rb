@@ -22,7 +22,10 @@ Rails.application.routes.draw do
 
 
   #devise routes
-  devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations'}
+  devise_for :users, controllers: { sessions: 'users/sessions', 
+                                    registrations: 'users/registrations', 
+                                    omniauth_callbacks: 'users/omniauth_callbacks'}
+
 
   resources :users 
 end
