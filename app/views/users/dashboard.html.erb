@@ -1,0 +1,52 @@
+<!-- display sub-navigation partial -->
+<%= render 'admin/includes/subnavigation' %>
+
+<!-- BODY INFORMATION CONTAINER -->
+<div class="container-fluid">
+
+  <!-- MISSION ACTION SECTION -->   
+      
+  <div class="row manageusersSection">
+    <div class="col-md-12">
+      <p id="notice"><%= notice %></p>
+
+      <h1>Listing Users</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th>First name</th>
+            <th>Middle name</th>
+            <th>Last name</th>
+            <th>Home phone</th>
+            <th>Mobile phone</th>
+            <th>Email</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <td><%= user.first_name %></td>
+              <td><%= user.middle_name %></td>
+              <td><%= user.last_name %></td>
+              <td><%= user.home_phone %></td>
+              <td><%= user.mobile_phone %></td>
+              <td><%= user.email %></td>
+              <td><%= link_to 'Show', user %></td>
+              <td><%= link_to 'Edit', edit_user_path(user) %></td>
+              <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <br>
+
+      <%= link_to 'New User', new_user_path %>
+    </div>
+  </div>
+
+</div> 
+<!-- /BODY container -->

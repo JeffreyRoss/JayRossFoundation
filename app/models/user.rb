@@ -10,8 +10,10 @@ class User < ActiveRecord::Base
 			:omniauthable, :omniauth_providers => [:facebook]
 
 	has_many :authorizations
+	belongs_to :role
 
 	before_save :encrypt_password
+	before_create :set_default_role
 
 	validates_confirmation_of :encrypted_password
 	validates_presence_of 	:encrypted_password, 	:on => :create
@@ -51,7 +53,7 @@ class User < ActiveRecord::Base
 		   user.last_name =  auth.info.last_name
 		   user.images = auth.info.image
 		   user.uid = auth.uid.to_s
-		   #first_name, :middle_name, :last_name, :home_phone, :mobile_phone, :email, :password
+		   user.provider = auth.provider
 		   user.email = auth.info.email
 		   user.save(:validate => false)
 		 end
@@ -61,4 +63,8 @@ class User < ActiveRecord::Base
 		end
 		authorization.user
 	end
+
+	def set_default_role
+		self.role ||= Role.find_by_name('registered')
+	end	
 end

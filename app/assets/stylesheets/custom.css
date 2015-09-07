@@ -440,6 +440,24 @@ a[data-provider=twitter]{background:#00ACED;border-color:#0099D3}
     margin-top: -36px;
   }
 
+  .indexTab,.showTab,.editTab {
+    background-image: url('tabGray.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 100 !important;
+    height: 36px;
+    top: 0;
+    left: 240px;
+    position: relative;
+  }
+
+  .indexSection,.showSection,.editSection {
+    background-color: white !important;
+    text-align: center;
+    margin-top: -36px;
+  }
+ 
+
   .manageusersTab {
     background-image: url('tabGray.png');
     background-repeat: no-repeat;

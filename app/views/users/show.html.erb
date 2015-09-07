@@ -1,0 +1,49 @@
+<!-- display sub-navigation partial -->
+<%= render 'users/shared/subnavigation' %>
+
+<!-- BODY INFORMATION CONTAINER -->
+<div class="container-fluid">
+
+  <!-- MANAGE USERS ACTION SECTION -->   
+      
+  <div class="row manageusersSection">
+    <div class="col-md-12">
+      <p id="notice"><%= notice %></p>
+
+      <p>
+        <strong>First name:</strong>
+        <%= @user.first_name %>
+      </p>
+
+      <p>
+        <strong>Middle name:</strong>
+        <%= @user.middle_name %>
+      </p>
+
+      <p>
+        <strong>Last name:</strong>
+        <%= @user.last_name %>
+      </p>
+
+      <p>
+        <strong>Home phone:</strong>
+        <%= @user.home_phone %>
+      </p>
+
+      <p>
+        <strong>Mobile phone:</strong>
+        <%= @user.mobile_phone %>
+      </p>
+
+      <p>
+        <strong>Email:</strong>
+        <%= @user.email %>
+      </p>
+
+      <%= link_to 'Edit', edit_user_path(@user) %> |
+      <%= link_to 'Back', users_path %>
+    </div>
+  </div>
+
+</div> 
+<!-- /BODY container -->

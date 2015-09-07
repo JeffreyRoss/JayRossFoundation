@@ -31,7 +31,7 @@
                 <li <% if activeMenu?(@activeMenuPaths,'initiatives') %> class="active" <% end %> ><%= link_to 'INITIATIVES',  initiatives_path %></li>
                 <li <% if activeMenu?(@activeMenuPaths,'takeaction') %>  class="active" <% end %> ><%= link_to 'TAKE ACTION',  takeaction_path %></li>
                 <li <% if activeMenu?(@activeMenuPaths,'ourimpact') %>   class="active" <% end %> ><%= link_to 'OUR IMPACT',   ourimpact_path %></li>
-                <% if user_signed_in? %>
+                <% if user_signed_in? && current_user.role.name == 'admin' %>
                     <li <% if activeMenu?(@activeMenuPaths,'admin') %>  class="active" <% end %> ><%= link_to 'ADMIN', admin_path %></li> 
                 <% end %>
             </ul>
@@ -51,15 +51,6 @@
                     </li>
                 </ul>
             <% else %>
-                <!--<%= form_for @user, :url => "/users/sign_in", :html => {:class => "navbar-form navbar-right loginForm"} do |f| %>
-                    <div class="form-group">
-                        <%= f.email_field :email, :placeholder => "Email", :class => "form-control", autofocus: true %>                        
-                    </div>
-                    <div class="form-group">
-                        <%= f.password_field :password, :placeholder => "Password", :class => "form-control", autocomplete: "off" %>
-                    </div>
-                    <button type="submit" class="btn btn-success">Sign in</button>
-                <% end %>-->
                 <div class="navbar-form navbar-right loginForm">
                     <%= link_to '<button type="submit" class="btn btn-success">Log In</button>'.html_safe, "/users/sign_in" %>                    
                 </div>

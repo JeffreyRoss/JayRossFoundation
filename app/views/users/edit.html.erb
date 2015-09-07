@@ -1,0 +1,21 @@
+<!-- display sub-navigation partial -->
+<%= render 'users/shared/subnavigation' %>
+
+<!-- BODY INFORMATION CONTAINER -->
+<div class="container-fluid">
+
+  <!-- MANAGE USERS ACTION SECTION -->   
+      
+  <div class="row manageusersSection">
+    <div class="col-md-12">
+		<h1>Editing User</h1>
+
+		<%= render 'form' %>
+
+		<%= link_to 'Show', @user%> |
+		<%= link_to 'Back', users_path %>
+    </div>
+  </div>
+
+</div> 
+<!-- /BODY container -->
