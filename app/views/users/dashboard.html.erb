@@ -10,37 +10,31 @@
     <div class="col-md-12">
       <p id="notice"><%= notice %></p>
 
-      <h1>Listing Users</h1>
+      <h1>Listing Userss</h1>
 
-      <table>
-        <thead>
-          <tr>
-            <th>First name</th>
-            <th>Middle name</th>
-            <th>Last name</th>
-            <th>Home phone</th>
-            <th>Mobile phone</th>
-            <th>Email</th>
-            <th colspan="3"></th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @users.each do |user| %>
-            <tr>
-              <td><%= user.first_name %></td>
-              <td><%= user.middle_name %></td>
-              <td><%= user.last_name %></td>
-              <td><%= user.home_phone %></td>
-              <td><%= user.mobile_phone %></td>
-              <td><%= user.email %></td>
-              <td><%= link_to 'Show', user %></td>
-              <td><%= link_to 'Edit', edit_user_path(user) %></td>
-              <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+      <div class="row">
+        <div class="col-md-1">First name</div>
+        <div class="col-md-1">Middle name</div>
+        <div class="col-md-1">Last name</div>
+        <div class="col-md-1">Home Phone</div>
+        <div class="col-md-1">Mobile Phoone</div>
+        <div class="col-md-1">Email</div>
+        <div class="col-md-6"></div>
+      </div>
+      <% @users.each do |user| %>
+        <div class="row">
+          <div class="col-md-1"><%= user.first_name %></div>
+          <div class="col-md-1"><%= user.middle_name %></div>
+          <div class="col-md-1"><%= user.last_name %></div>
+          <div class="col-md-1"><%= user.home_phone %></div>
+          <div class="col-md-1"><%= user.mobile_phone %></div>
+          <div class="col-md-1"><%= user.email %></div>
+          <div class="col-md-1"><%= link_to 'Show', user %></div>
+          <div class="col-md-1"><%= link_to 'Edit', edit_user_path(user) %></div>
+          <div class="col-md-1"><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+          <div class="col-md-3"></div>
+        </div>
+      <% end %>
 
       <br>
 

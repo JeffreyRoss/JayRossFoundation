@@ -374,6 +374,23 @@ a[data-provider=twitter]{background:#00ACED;border-color:#0099D3}
 -------------------------------------------------- */
 
 
+/* BEGIN ADMIN SECTION
+-------------------------------------------------- */
+
+.manageUsersHeaders{
+  background-color: #efeded;
+}
+
+.manageUsersData{
+
+}
+
+
+
+
+/* END ADMIN SECTION
+-------------------------------------------------- */
+
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
@@ -471,7 +488,7 @@ a[data-provider=twitter]{background:#00ACED;border-color:#0099D3}
 
   .manageusersSection{
     background-color: white !important;
-    text-align: center;
+    text-align: left;
     margin-top: -36px;
   }
 
@@ -538,6 +555,7 @@ a[data-provider=twitter]{background:#00ACED;border-color:#0099D3}
 }
 
 @media (max-width: 769px){
+
   .subNav{
     background-color: #0C2B4B !important;
     margin-top: 111px;
@@ -694,6 +712,7 @@ a[data-provider=twitter]{background:#00ACED;border-color:#0099D3}
 /* Large desktop */
 @media (min-width: 885px) { 
 
+
   .makeDonation {
     background-image: url('childwCancerLrg.jpg') !important;
     height: 300px;
@@ -738,7 +757,6 @@ a[data-provider=twitter]{background:#00ACED;border-color:#0099D3}
  }
 
 @media (min-width: 768px) {
-
 
   /* Navbar positioning foo */
   .navbar-wrapper {

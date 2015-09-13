@@ -2,9 +2,12 @@ require 'rails_helper'
 
 RSpec.describe ApplicationController, type: :controller do
 
+  login_user   
+
   controller do
-    def dummy
-      render text: 'Hello world'
+    def index
+      init_session
+      render text: 'hello world'
     end    
   end
 
@@ -13,23 +16,26 @@ RSpec.describe ApplicationController, type: :controller do
   describe ".init_session" do
     
     context 'when logged in' do
-      login_user
 
-      before(:each) do  
-        routes.draw { get 'dummy' => 'anonymous#dummy' }
-        get :dummy
+
+      before(:each) do 
+        get :index
       end      
 
       it 'should set @user with logged in user' do
-        expect(@user.email).to eq('testuser@gmail.com')
+        assigns[:user] == assigns[:current_user]
       end
     end
 
     context 'when not logged in' do
+      logout_user
+
+      before(:each) do 
+        get :index
+      end         
 
       it 'should set @user with new user object' do
-        expect(@user.email).not_to eq(nil)
-        expect(@user.id).to eq(nil)
+        assigns[:user] == User.new
       end
 
     end 	

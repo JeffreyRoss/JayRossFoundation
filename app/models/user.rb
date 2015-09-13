@@ -13,12 +13,14 @@ class User < ActiveRecord::Base
 	belongs_to :role
 
 	before_save :encrypt_password
-	before_create :set_default_role
 
 	validates_confirmation_of :encrypted_password
 	validates_presence_of 	:encrypted_password, 	:on => :create
 	validates_presence_of 	:email,    	:on => :create
 	validates_uniqueness_of :email
+	validates :role_id, presence: true, numericality: { only_integer: true }
+
+	protected 
 
 	def encrypt_password
 		if password.present?
@@ -64,7 +66,7 @@ class User < ActiveRecord::Base
 		authorization.user
 	end
 
-	def set_default_role
+	after_initialize do |user|
 		self.role ||= Role.find_by_name('registered')
-	end	
+	end
 end

@@ -8,7 +8,7 @@ RSpec.describe Users::SessionsController, type: :controller do
     end
 
     it 'should set the Sign In page title' do
-      pageTitle = "Sign Up"
+      pageTitle = "JRFoundation - Sign Up"
       expect(assigns(:pageTitle)).to eq(pageTitle)
     end   
 

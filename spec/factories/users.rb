@@ -3,6 +3,9 @@ require 'ffaker'
 FactoryGirl.define do
 
   factory :user do
+  	transient do
+  		role_name "registered"
+  	end
 
     first_name { FFaker::Name.first_name }
     middle_name { FFaker::Name.first_name }
@@ -15,6 +18,10 @@ FactoryGirl.define do
     password  {'Password123'}
 
 
-  end
+    provider {'facebook'}
 
+    role do
+    	Role.find_by(name: role_name) || FactoryGirl.create(:role, name: role_name)
+    end
+  end
 end

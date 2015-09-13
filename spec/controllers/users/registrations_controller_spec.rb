@@ -19,6 +19,10 @@ RSpec.describe Users::RegistrationsController, type: :controller do
   end
 
   describe "POST #create" do
+    before(:each) do  
+      @request.env["devise.mapping"] = Devise.mappings[:user] 
+      get :create
+    end    
 
     context 'with valid attributes' do
       it 'creates a user'

@@ -30,6 +30,7 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
 
   config.include Devise::TestHelpers, :type => :controller
+  config.include Devise::TestHelpers, :type => :requests
   config.extend ControllerMacros, :type => :controller
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures

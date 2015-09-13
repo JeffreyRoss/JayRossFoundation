@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def init_session
+
   	if user_signed_in? 
   		@user = current_user
   	else
